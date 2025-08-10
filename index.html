@@ -27,9 +27,11 @@
             --c-green: rgb(133, 153, 0);
         }
 
-        /* 1. Set background colour */
+        /* 1. Set background colour 11. Set max-width*/
         body {
             background-color: var(--c-background-color);
+            max-width: 800px;
+            margin: 0 auto;
         }
 
         /* 2. Set background of header and footer */
@@ -59,8 +61,31 @@
         /* 6. Create border around subsection */
         .subsection {
             border: 3px solid var(--c-cyan);
-            padding: 15px;
-            margin: 20px 0;
+        }
+        
+        /* 7. Centre, Re-size, Colour Header */
+        header h1 {
+            text-align: center;
+            font-size: 150%;
+            color: var(--c-yellow);
+        }
+
+        /* 8. Remove bullet points from ul list */
+        nav ul {
+            list-style: none;
+
+        }
+
+        /* 9. Center, align and flex layout of nav items */
+        nav {
+            width: 100%;
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 75px;
         }
 
         /* 10. Aside text colour requirements */
@@ -74,6 +99,27 @@
 
         aside a:hover {
             color: var(--c-blue);
+        }
+
+        /* 12. Set padding to article headings */
+        article h2,
+        article h3 {
+            padding-top: 50px;
+        }
+
+        /* 13. Layout change - side by side*/
+        main {
+            display: flex;
+            gap: 30px;
+            padding: 20px;
+        }
+
+        article {
+            flex: 2;
+        }
+
+        aside {
+            flex: 1;
         }
     </style>
 
