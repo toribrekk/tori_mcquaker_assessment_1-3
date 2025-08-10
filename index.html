@@ -32,25 +32,40 @@
             background-color: var(--c-background-color);
             max-width: 800px;
             margin: 0 auto;
+            font-family: 'Montserrat', Arial, sans-serif;
         }
 
         /* 2. Set background of header and footer */
         header,
         footer {
             background-color: var(--c-background-highlights);
-
-        }
-
-        /* 3. Text color for main, footer, and header */
-        main,
-        footer,
-        header {
+            /* 3. Text color for main, footer, and header */
             color: var(--base-font-color);
         }
 
-        /* 4. Set links in article to magenta */
-        article a {
-            color: var(--c-magenta);
+        /* 7. Centre, Re-size, Colour Header */
+        header h1 {
+            text-align: center;
+            font-size: 150%;
+            color: var(--c-yellow);
+        }
+
+        /* 13. Layout change - side by side*/
+        main {
+            /* 3. Text color for main, footer, and header */
+            color: var(--base-font-color);
+            display: flex;
+            gap: 30px;
+            padding: 20px;
+        }
+
+        a {
+            text-decoration: none;
+            color: var(--emphasised-font);
+        }
+
+        a:visited {
+            color: var(--c-violet);
         }
 
         /* 5. Set link:hover to orange */
@@ -58,16 +73,33 @@
             color: var(--c-orange);
         }
 
+        a:active {
+            color: var(--c-violet);
+            text-decoration: underline;
+        }
+
+        /* 13. Layout change - side by side*/
+        article {
+            flex: 2;
+        }
+
+        /* 4. Set links in article to magenta */
+        article a {
+            color: var(--c-magenta);
+        }
+
+        /* 12. Set padding to article headings */
+        article h2,
+        article h3 {
+            padding-top: 50px;
+            color: var(--emphasised-font);
+        }
+
         /* 6. Create border around subsection */
         .subsection {
             border: 3px solid var(--c-cyan);
-        }
-        
-        /* 7. Centre, Re-size, Colour Header */
-        header h1 {
-            text-align: center;
-            font-size: 150%;
-            color: var(--c-yellow);
+            padding: 15px;
+            margin: 20px 0;
         }
 
         /* 8. Remove bullet points from ul list */
@@ -79,18 +111,21 @@
         /* 9. Center, align and flex layout of nav items */
         nav {
             width: 100%;
+
         }
 
         nav ul {
             display: flex;
             justify-content: center;
             flex-wrap: wrap;
-            gap: 75px;
+            gap: 10%;
         }
 
         /* 10. Aside text colour requirements */
         aside {
             color: var(--c-green);
+            /* 13. Layout change - side by side*/
+            flex: 1;
         }
 
         aside a {
@@ -101,25 +136,10 @@
             color: var(--c-blue);
         }
 
-        /* 12. Set padding to article headings */
-        article h2,
-        article h3 {
-            padding-top: 50px;
-        }
-
-        /* 13. Layout change - side by side*/
-        main {
-            display: flex;
-            gap: 30px;
-            padding: 20px;
-        }
-
-        article {
-            flex: 2;
-        }
-
-        aside {
-            flex: 1;
+        input[type="search"]:hover,
+        input[type="submit"]:hover {
+            outline: 2px solid var(--secondary-font-color);
+            outline-offset: 2px;
         }
     </style>
 
