@@ -1,0 +1,142 @@
+:root {
+    --base-font-color: rgb(131, 148, 150);
+    --secondary-font-color: rgb(88, 110, 117);
+    --emphasised-font: rgb(147, 161, 161);
+
+    --c-background-color: rgb(0, 43, 54);
+    --c-background-highlights: rgb(7, 54, 66);
+
+    --c-yellow: rgb(181, 137, 0);
+    --c-orange: rgb(203, 75, 22);
+    --c-red: rgb(220, 50, 47);
+    --c-magenta: rgb(211, 54, 130);
+    --c-violet: rgb(108, 113, 196);
+    --c-blue: rgb(38, 139, 210);
+    --c-cyan: rgb(42, 161, 152);
+    --c-green: rgb(133, 153, 0);
+}
+
+/* 1. Set background colour 11. Set max-width*/
+body {
+    background-color: var(--c-background-color);
+    max-width: 800px;
+    margin: 0 auto;
+    font-family: 'Montserrat', Arial, sans-serif;
+}
+
+/* 2. Set background of header and footer */
+header,
+footer {
+    background-color: var(--c-background-highlights);
+    /* 3. Text color for main, footer, and header */
+    color: var(--base-font-color);
+}
+
+/* 7. Centre, Re-size, Colour Header */
+header h1 {
+    text-align: center;
+    font-size: 150%;
+    color: var(--c-yellow);
+}
+
+/* 13. Layout change - side by side*/
+main {
+    /* 3. Text color for main, footer, and header */
+    color: var(--base-font-color);
+    display: flex;
+    gap: 30px;
+    padding: 20px;
+}
+
+a {
+    text-decoration: none;
+    color: var(--emphasised-font);
+}
+
+a:visited {
+    color: var(--c-violet);
+}
+
+/* 5. Set link:hover to orange */
+a:hover {
+    color: var(--c-orange);
+}
+
+a:active {
+    color: var(--c-violet);
+    text-decoration: underline;
+}
+
+/* 13. Layout change - side by side*/
+article {
+    flex: 2;
+}
+
+/* 4. Set links in article to magenta */
+article a {
+    color: var(--c-magenta);
+}
+
+/* 12. Set padding to article headings */
+article h2,
+article h3 {
+    padding-top: 50px;
+    color: var(--emphasised-font);
+}
+
+/* 6. Create border around subsection */
+.subsection {
+    border: 3px solid var(--c-cyan);
+    padding: 15px;
+    margin: 20px 0;
+}
+
+/* 8. Remove bullet points from ul list */
+nav ul {
+    list-style: none;
+
+}
+
+/* 9. Center, align and flex layout of nav items */
+nav {
+    width: 100%;
+
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10%;
+}
+
+/* 10. Aside text colour requirements */
+aside {
+    color: var(--c-green);
+    /* 13. Layout change - side by side*/
+    flex: 1;
+}
+
+aside a {
+    color: var(--c-red);
+}
+
+aside a:hover {
+    color: var(--c-blue);
+}
+
+input[type="search"] {
+    margin-left: 20px;
+}
+
+input[type="search"]:hover,
+input[type="submit"]:hover {
+    outline: 2px solid var(--secondary-font-color);
+    outline-offset: 2px;
+}
+
+input[type="search"]:focus,
+input[type="submit"]:focus {
+    outline: 2px solid var(--c-violet);
+    outline-offset: 2px;
+}
